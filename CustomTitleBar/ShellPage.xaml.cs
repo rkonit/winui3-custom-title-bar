@@ -21,25 +21,13 @@ using Windows.Foundation.Collections;
 namespace CustomTitleBar
 {
     /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
+    /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class ShellPage : Page
     {
-        public MainWindow()
+        public ShellPage()
         {
             this.InitializeComponent();
-
-            // Hide the default title bar
-            ExtendsContentIntoTitleBar = true;
-
-            // Set App Name
-            AppTitle.Text = "WinUI 3 Custom Title Bar";            
-
-            // Set UIElement to support title bar behavior
-            SetTitleBar(AppTitleBar);
-
-            // Load content represented by the specified Page
-            MainFrame.Navigate(typeof(ShellPage));
         }
     }
 }
